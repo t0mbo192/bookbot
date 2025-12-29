@@ -9,7 +9,8 @@ def main():
     number_of_characters_in_book = count_characters(book)
 
     print(f"Found {number_of_words_in_book} total words")
-    print(number_of_characters_in_book)
+    for key, value in number_of_characters_in_book.items():
+        print(f"{key}: {value}")
 
 if __name__ == '__main__':
     main()
