@@ -4,7 +4,11 @@ import sys
 
 def main():
 
-    book = r"/home/tommygun2486/Workspace/bookbot/books/frankenstein.txt"
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+    if len(sys.argv) == 2:
+        book = sys.argv[1]
 
     number_of_words_in_book = read_book_content(book)
     number_of_characters_in_book = count_characters(book)
@@ -17,7 +21,7 @@ def main():
         print(f"{key}: {value}")
     print("========== END ==========")
 
-    print(sys.argv[1])
+    
 
 if __name__ == '__main__':
     main()
